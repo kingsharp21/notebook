@@ -1,11 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose'); 
 const app = express();
-// var bodyParser = require('body-parser') 
+const bodyParser = require('body-parser')
 //connecting the routes
 const routes = require('./routes/routes');
 
 app.use(express.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+})); 
 app.use('/api', routes)
 
 

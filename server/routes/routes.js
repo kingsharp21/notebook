@@ -5,7 +5,6 @@ const router = express.Router()
 
 //Post Method
 router.post('/savenote', (req, res) => {
-    // res.send('Post API')
      if (!req.body) {
         res.status(400).send({message:"content can not be empty!"})
         return;
