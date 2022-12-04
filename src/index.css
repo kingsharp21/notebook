@@ -1,8 +1,6 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-		'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -47,6 +45,9 @@ code {
 .note.new {
 	background-color: #67d7cc;
 }
+.note.edit{
+	background-color: #f0aa47;
+}
 .title_input{
 	border-radius: 5px;
 	padding: .5rem;
@@ -66,6 +67,13 @@ textarea {
 	border: none;
 	resize: none;
 	background-color: #67d7cc;
+}
+textarea#edit {
+	padding-top:20px ;
+	font-size: 1.1rem;
+	border: none;
+	resize: none;
+	background-color: #f0aa47;
 }
 
 textarea:focus {
@@ -104,6 +112,7 @@ textarea:focus {
 	cursor: pointer;
 }
 #title{
+	padding: 2px 0;
 	margin: 0;
 	font-size: 1.5rem;
 	text-transform: capitalize;
@@ -111,10 +120,12 @@ textarea:focus {
 	font-weight: bolder;
 }
 #body{
+	padding: 5px 0;
 	font-size: 1.1rem;
 	word-wrap:break-word;
 }
 .note-footer {
+	margin-top: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

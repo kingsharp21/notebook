@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import edit_img from '../assets/img/edit.png'
+import edit_svg from '../assets/img/edit.svg'
 import delect_svg from '../assets/img/delect.svg'
 
 const Note = ({ id, body,title, date, handleDeleteNote }) => {
@@ -44,7 +44,7 @@ const Note = ({ id, body,title, date, handleDeleteNote }) => {
 	return (
 		<>
 		{edit === true?
-		<form className='note new' onSubmit={handleSaveClick(id)}>
+		<form className='note edit' onSubmit={handleSaveClick(id)}>
 			<input
 				className='title_input'
 				type="text"
@@ -54,6 +54,7 @@ const Note = ({ id, body,title, date, handleDeleteNote }) => {
 				/>
 			<textarea
 				className='body_input'
+				id='edit'
 				rows='8'
 				cols='10'
 				placeholder='Type to add a note...'
@@ -70,7 +71,7 @@ const Note = ({ id, body,title, date, handleDeleteNote }) => {
 			</div>
 		</form>:
 		<div className='note'>
-			<img className='edit' src={edit_img} alt="edit" onClick={needEdit} />
+			<img className='edit' src={edit_svg} alt="edit" onClick={needEdit} />
 			<h1 id='title'>{title}</h1>
 			<span id='body'>{body}</span>
 			<div className='note-footer'>
