@@ -47,8 +47,22 @@ code {
 .note.new {
 	background-color: #67d7cc;
 }
+.title_input{
+	border-radius: 5px;
+	padding: .5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	background-color: rgb(233, 233, 233);
+	border: none;
+
+}
+.title_input:focus{
+	outline: none;
+}
 
 textarea {
+	padding-top:20px ;
+	font-size: 1.1rem;
 	border: none;
 	resize: none;
 	background-color: #67d7cc;
@@ -71,6 +85,7 @@ textarea:focus {
 }
 
 .note {
+	position: relative;
 	background-color: #fef68a;
 	word-wrap: break-word;
 	overflow: hidden;
@@ -82,7 +97,23 @@ textarea:focus {
 	justify-content: space-between;
 	white-space: pre-wrap;
 }
-
+.note .edit{
+	position: absolute;
+	right: 15px;
+	padding: 5px;
+	cursor: pointer;
+}
+#title{
+	margin: 0;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	text-emphasis:inherit;
+	font-weight: bolder;
+}
+#body{
+	font-size: 1.1rem;
+	word-wrap:break-word;
+}
 .note-footer {
 	display: flex;
 	align-items: center;
@@ -98,7 +129,9 @@ textarea:focus {
 	align-items: center;
 	background-color: rgb(233, 233, 233);
 	border-radius: 10px;
-	padding: 5px;
+	padding: 10px;
+	font-size: 1.2rem;
+	font-weight: 600;
 	margin-bottom: 1.5em;
 }
 
